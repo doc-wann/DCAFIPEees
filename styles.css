@@ -1,0 +1,643 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Background */
+body {
+    background-color: #ffffff; /* Solid color background */
+    background-image: url('https://www.transparentpng.com/download/pattern/p3NBVZ-data-security-and-privacy-software-services-safe-data.png'); /* Transparent graphic element */
+    background-repeat: repeat;
+    background-position: top right; /* You can adjust the position */
+    background-size: 300px; /* Adjust the size of the graphical element */
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Sidebar */
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #0047ab;
+    position: fixed;
+    top: 0px;
+    left: -250px; /* Inicialmente fora da tela */
+    transition: left 0.3s ease; /* Suave transição ao abrir/fechar */
+    padding-top: 60px;
+}
+
+.sidebar.open {
+    left: 0; /* Quando a classe "open" é adicionada, move a sidebar para a tela */
+}
+
+.sidebar ul {
+    list-style: none;
+}
+
+.sidebar ul li {
+    padding: 15px;
+    text-align: center;
+}
+
+.sidebar ul li a, .sidebar ul li button {
+    text-decoration: none;
+    color: white;
+    display: block;
+    font-size: 18px;
+    border: none;
+    background: none;
+}
+
+.sidebar ul li button {
+    cursor: pointer;
+}
+
+/* Intro Faixa */
+.intro {
+    background-color: #007bff;
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.intro h1 {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+.intro p {
+    font-size: 18px;
+}
+
+/* Agenda (Important Dates Section) */
+.agenda {
+    background-color: #f8f9fa;
+    padding: 20px;
+    max-width: 600px;
+    margin: 40px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.agenda h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #0047ab;
+}
+
+/* Dates container for GP and GF */
+.dates-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Dates column for GP and GF */
+.dates-column {
+    flex: 1;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dates-column:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.dates-column h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+/* List of dates */
+.date-list {
+    list-style: none;
+    padding: 0;
+}
+
+.date-list li {
+    font-size: 16px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.date-list li span {
+    display: inline-block;
+    background-color: #007bff;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 60px;
+    text-align: center;
+}
+
+/* Hover effects for individual date items */
+.date-list li:hover {
+    color: #0047ab;
+}
+
+
+/* Footer */
+footer {
+    background-color: #0047ab;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #333;
+    color: #f8f9fa;
+}
+
+body.dark-mode header {
+    background-color: #222;
+}
+
+body.dark-mode footer {
+    background-color: #222;
+}
+
+body.dark-mode .card, 
+body.dark-mode .sidebar {
+    background-color: #444;
+    box-shadow: none;
+}
+
+body.dark-mode .card p, 
+body.dark-mode .dates li {
+    color: #a2a2a2;
+}
+
+body.dark-mode .theme-toggle button {
+    background-color: #f8f9fa;
+    color: #333;
+}
+
+
+/* Carousel container */
+.carousel {
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1200px;
+}
+
+.carousel h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Carousel track container */
+.carousel-track-container {
+    overflow: hidden;
+    position: relative;
+}
+
+/* Carousel track */
+.carousel-track {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Carousel slide */
+.carousel-slide {
+    min-width: 300px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.carousel-slide img {
+    width: 100%;
+    border-radius: 10px;
+    display: block;
+}
+
+/* Hover effect */
+.carousel-slide:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Carousel buttons */
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    font-size: 24px;
+    z-index: 1;
+    transition: background-color 0.3s ease;
+}
+
+.carousel-button.prev {
+    left: 10px;
+}
+
+.carousel-button.next {
+    right: 10px;
+}
+
+.carousel-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Consistent image size */
+.carousel-slide img {
+    height: 200px;
+    object-fit: cover;
+}
+
+
+
+/* Drives das aulas section */
+.drives-section {
+    margin: 40px auto;
+    text-align: center;
+    padding: 30px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+}
+
+.drives-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+    color: #0047ab;
+}
+
+.drives-section h3 {
+    color: #002457;
+}
+
+/* Drives container */
+.drives-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 40px;
+}
+
+/* Each drive link */
+.drive-link {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.drive-link img {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 10px;
+    filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.1));
+}
+
+.drive-link span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover effects for drive links */
+.drive-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
+}
+
+.drive-link img:hover {
+    filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
+}
+
+
+
+/* Updates section */
+.updates-section {
+    margin: 50px auto;
+    padding: 30px;
+    max-width: 1200px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.updates-section h2 {
+    font-size: 24px;
+    margin-bottom: 30px;
+    color: #0047ab;
+}
+
+/* Updates container */
+.updates-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* Update card */
+.update-card {
+    position: relative;
+    width: 30%;
+    min-width: 250px;
+    overflow: hidden;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.update-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+/* Overlay effect */
+.update-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.update-overlay p {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Hover effects */
+.update-card:hover img {
+    transform: scale(1.1);
+}
+
+.update-card:hover .update-overlay {
+    opacity: 1;
+}
+
+.update-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+/* Container for Agenda and Drives */
+.agenda-drives-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px; /* Adds some space between the two sections */
+    margin: 30px auto;
+    max-width: 1200px; /* Adjusts the width of the container */
+    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+}
+
+/* Agenda styling (same as before) */
+.agenda {
+    flex: 1; /* Takes up equal space with the drives section */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Drives section styling (same as before) */
+.drives-section {
+    flex: 1; /* Takes up equal space with the agenda section */
+    padding: 20px;
+    background-color: #f8f9fa;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Style adjustments to make sure both sections align properly */
+.drives-container, .dates-container {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.drives-container a, .dates-column {
+    flex: 1;
+    text-align: center;
+}
+
+/* Ensure the sections adjust properly on smaller screens */
+@media (max-width: 768px) {
+    .agenda-drives-container {
+        flex-direction: column; /* Stacks the sections vertically on small screens */
+    }
+}
+
+
+/* Header */
+.site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0047ab;
+    padding: 15px 30px;
+    color: white;
+    position: relative;
+}
+
+/* Left Section: Logo and Sidebar Button */
+.header-left {
+    display: flex;
+    align-items: center;
+}
+
+.header-left img {
+    width: 60px;
+    height: auto;
+    margin-right: 15px;
+}
+
+.open-btn {
+    font-size: 24px;
+    background-color: #0047ab;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 5px 15px;
+    transition: transform 0.3s ease;
+}
+
+.open-btn:hover {
+    transform: scale(1.1);
+}
+
+/* Title and Subtitle centered in the screen */
+.header-title {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+
+.header-title h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.header-title .subtitle {
+    font-size: 16px;
+    margin-top: 5px;
+    font-weight: normal;
+    color: #d3d3d3;
+}
+
+/* Right Section: FIPE Logo */
+.header-right img {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Hover effect for logos */
+.header-left img:hover, .header-right img:hover {
+    transform: scale(1.1);
+    transition: transform 0.3s ease;
+}
+
+
+/* Dark Mode for Body */
+body.dark-mode {
+    background-color: #222; /* Dark mode background */
+    color: #f8f9fa; /* Light text for dark mode */
+}
+
+/* Sidebar in Dark Mode */
+body.dark-mode .sidebar {
+    background-color: #1a1a2e; /* Darker shade for sidebar */
+}
+
+body.dark-mode .open-btn
+{
+    background-color: #1a1a2e; /* Darker shade for sidebar button */
+}
+
+/* Intro Section in Dark Mode */
+body.dark-mode .intro {
+    background-color: #1a1a2e; /* Darker intro section */
+    color: #f8f9fa;
+}
+
+/* Agenda Section in Dark Mode */
+body.dark-mode .agenda {
+    background-color: #333; /* Dark mode agenda background */
+    box-shadow: none;
+}
+
+body.dark-mode .agenda h2 {
+    color: #f8f9fa; /* Lighter heading for dark mode */
+}
+
+/* Dates Section in Dark Mode */
+body.dark-mode .dates-column {
+    background-color: #444; /* Darker background for date column */
+    box-shadow: none;
+}
+
+body.dark-mode .dates-column h3 {
+    color: #f8f9fa; /* Lighter heading color for dark mode */
+}
+
+body.dark-mode .date-list li span {
+    background-color: #444; /* Darker badge for dates */
+}
+
+/* Footer in Dark Mode */
+body.dark-mode footer {
+    background-color: #1a1a2e; /* Dark mode footer background */
+}
+
+/* Dark Mode for Carousel */
+body.dark-mode .carousel-slide {
+    background-color: #333; /* Dark mode carousel slide background */
+}
+
+/* Dark Mode for Drives Section */
+body.dark-mode .drives-section {
+    background-color: #1a1a2e; /* Dark mode for drives section */
+}
+
+body.dark-mode .drives-section h2 {
+    color: #f8f9fa;
+}
+
+body.dark-mode .drives-section h3 {
+    color: #f8f9fa;
+}
+
+/* Updates Section in Dark Mode */
+body.dark-mode .updates-section {
+    background-color: #1a1a2e; /* Darker background for updates section */
+}
+
+body.dark-mode .updates-section h2{
+    color: #f8f9fa; /* Darker background for updates section */
+}
+
+body.dark-mode .update-card {
+    background-color: #333;
+    box-shadow: none;
+}
+
+/* Hover effects for light mode and dark mode */
+body.dark-mode .sidebar ul li a:hover,
+body.dark-mode .sidebar ul li button:hover {
+    color: #f8f9fa; /* Lighter hover for dark mode */
+}
+
+/* Header in Dark Mode */
+body.dark-mode .site-header {
+    background-color: #1a1a2e; /* Dark mode for header */
+}
+
+body.dark-mode .header-title h1,
+body.dark-mode .header-title .subtitle {
+    color: #f8f9fa; /* Light color for dark mode header title */
+}

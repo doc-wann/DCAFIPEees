@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DCA - FIPEees</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Menu lateral expansível -->
+    <div class="sidebar" id="sidebar">
+        <ul>
+            <li><a href="#">Início</a></li>
+            <li><a href="#">Projetos</a></li>
+            <li><a href="#">Solidariedade</a></li>
+            <li><a href="#">Contato</a></li>
+            <li><a button id="toggle-theme">Modo Claro</a button></li>
+        </ul>
+    </div>
+
+    <header class="site-header">
+        <!-- Left Logo (DCA President) and Sidebar Button -->
+        <div class="header-left">
+            <a href="https://example.com/dca-president" target="_blank">
+                <img src="https://starsoft.com.br/wp-content/uploads/2023/09/FIPE.png" alt="Logo of DCA President">
+            </a>
+            <!-- Sidebar toggle button -->
+            <button class="open-btn" id="open-btn">☰</button>
+        </div>
+    
+        <!-- Title and Subtitle, fully centered -->
+        <div class="header-title">
+            <h1>DCA - FIPEees</h1>
+            <h2 class="subtitle">Conselho Acadêmico - Gestão de Projetos Estudantis</h2>
+        </div>
+    
+        <!-- Right Logo (FIPE) -->
+        <div class="header-right">
+            <a href="https://fipe.org.br" target="_blank">
+                <img src="https://starsoft.com.br/wp-content/uploads/2023/09/FIPE.png" alt="FIPE Logo">
+            </a>
+        </div>
+    </header>
+    
+
+    <main class="main-content">
+        <!-- Conteúdo principal -->
+
+        <section class="updates-section">
+            <h2>Últimas Atualizações</h2>
+            <div class="updates-container">
+                <div class="update-card">
+                    <a href="https://example.com/post1" target="_blank">
+                        <img src="https://st2.depositphotos.com/1001911/7684/v/450/depositphotos_76840867-stock-illustration-pointing-at-himself-emoticon.jpg"
+                            alt="Post 1 Image">
+                        <div class="update-overlay">
+                            <p>Oi lele!</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="update-card">
+                    <a href="https://example.com/post2" target="_blank">
+                        <img src="https://st2.depositphotos.com/1001911/7684/v/450/depositphotos_76840867-stock-illustration-pointing-at-himself-emoticon.jpg"
+                            alt="Post 2 Image">
+                        <div class="update-overlay">
+                            <p>Vão ter as noticias das coisas aqui</p>
+                        </div>
+                    </a>
+                </div>
+                <div class="update-card">
+                    <a href="https://example.com/post3" target="_blank">
+                        <img src="https://st2.depositphotos.com/1001911/7684/v/450/depositphotos_76840867-stock-illustration-pointing-at-himself-emoticon.jpg"
+                            alt="Post 3 Image">
+                        <div class="update-overlay">
+                            <p>Entendeu?</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- Add more cards as needed -->
+            </div>
+        </section>
+
+
+        <!-- Carrossel de projetos e ONGs -->
+        <section class="carousel">
+            <h2>Projetos e ONGs</h2>
+            <div class="carousel-track-container">
+                <button class="carousel-button prev">‹</button>
+                <ul class="carousel-track">
+                    <li class="carousel-slide current-slide">
+                        <a href="https://refugio343.org/" target="_blank">
+                            <img src="https://cqsfv.com.br/wp-content/uploads/2022/12/refugio-343-logo-mobile.jpg"
+                                alt="Refugio 343">
+                        </a>
+                    </li>
+                    <li class="carousel-slide">
+                        <a href="https://refugio343.org/" target="_blank">
+                            <img src="https://cqsfv.com.br/wp-content/uploads/2022/12/refugio-343-logo-mobile.jpg"
+                                alt="Refugio 343">
+                        </a>
+                    </li>
+                    <li class="carousel-slide">
+                        <a href="https://refugio343.org/" target="_blank">
+                            <img src="https://cqsfv.com.br/wp-content/uploads/2022/12/refugio-343-logo-mobile.jpg"
+                                alt="Refugio 343">
+                        </a>
+                    </li>
+                    <li class="carousel-slide">
+                        <a href="https://refugio343.org/" target="_blank">
+                            <img src="https://cqsfv.com.br/wp-content/uploads/2022/12/refugio-343-logo-mobile.jpg"
+                                alt="Refugio 343">
+                        </a>
+                    </li>
+                </ul>
+                <button class="carousel-button next">›</button>
+            </div>
+        </section>
+
+        <div class="agenda-drives-container">
+            <!-- Bloco de agenda -->
+            <aside class="agenda">
+                <h2>Datas Importantes</h2>
+                <div class="dates-container">
+                    <div class="dates-column">
+                        <h3>Gestão Pública (GP)</h3>
+                        <ul class="date-list">
+                            <!-- Dates for GP -->
+                        </ul>
+                    </div>
+                    <div class="dates-column">
+                        <h3>Gestão Financeira (GF)</h3>
+                        <ul class="date-list">
+                            <!-- Dates for GF -->
+                        </ul>
+                    </div>
+                </div>
+            </aside>
+
+            <!-- Bloco de Drives das Aulas -->
+            <section class="drives-section">
+                <h2>Drives das aulas</h2>
+                <div class="drives-container">
+                    <a href="https://drive.google.com/drive/folders/YOUR_GP_LINK" target="_blank" class="drive-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2246/2246713.png" alt="Gestão Pública Folder">
+                        <span><h3>Gestão Pública (GP)</h3></span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/YOUR_GF_LINK" target="_blank" class="drive-link">
+                        <img src="https://cdn-icons-png.flaticon.com/512/2246/2246713.png"
+                            alt="Gestão Financeira Folder">
+                        <span><h3>Gestão Financeira (GF)</h3></span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+
+
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Diretório Acadêmico - Todos os direitos reservados.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
