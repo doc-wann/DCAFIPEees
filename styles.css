@@ -10,14 +10,13 @@ body {
     background-color: #ffffff; /* Solid color background */
     background-image: url('https://www.transparentpng.com/download/pattern/p3NBVZ-data-security-and-privacy-software-services-safe-data.png'); /* Transparent graphic element */
     background-repeat: repeat;
-    background-position: top right; /* You can adjust the position */
-    background-size: 300px; /* Adjust the size of the graphical element */
+    background-position: top right;
+    background-size: 300px;
     font-family: 'Roboto', sans-serif;
     color: #333;
     margin: 0;
     padding: 0;
 }
-
 
 /* Sidebar */
 .sidebar {
@@ -26,13 +25,14 @@ body {
     background-color: #0047ab;
     position: fixed;
     top: 0px;
-    left: -250px; /* Inicialmente fora da tela */
-    transition: left 0.3s ease; /* Suave transição ao abrir/fechar */
+    left: -250px; /* Hidden initially */
+    transition: left 0.3s ease;
     padding-top: 60px;
+    z-index: 994; 
 }
 
 .sidebar.open {
-    left: 0; /* Quando a classe "open" é adicionada, move a sidebar para a tela */
+    left: 0; /* Sidebar appears on open */
 }
 
 .sidebar ul {
@@ -57,7 +57,7 @@ body {
     cursor: pointer;
 }
 
-/* Intro Faixa */
+/* Intro Section */
 .intro {
     background-color: #007bff;
     color: white;
@@ -74,7 +74,7 @@ body {
     font-size: 18px;
 }
 
-/* Agenda (Important Dates Section) */
+/* Agenda Section */
 .agenda {
     background-color: #f8f9fa;
     padding: 20px;
@@ -91,14 +91,13 @@ body {
     color: #0047ab;
 }
 
-/* Dates container for GP and GF */
+/* Dates container */
 .dates-container {
     display: flex;
     justify-content: space-between;
     gap: 20px;
 }
 
-/* Dates column for GP and GF */
 .dates-column {
     flex: 1;
     background-color: #fff;
@@ -119,7 +118,6 @@ body {
     color: #007bff;
 }
 
-/* List of dates */
 .date-list {
     list-style: none;
     padding: 0;
@@ -144,11 +142,9 @@ body {
     text-align: center;
 }
 
-/* Hover effects for individual date items */
 .date-list li:hover {
     color: #0047ab;
 }
-
 
 /* Footer */
 footer {
@@ -191,8 +187,7 @@ body.dark-mode .theme-toggle button {
     color: #333;
 }
 
-
-/* Carousel container */
+/* Carousel */
 .carousel {
     width: 100%;
     margin: 0 auto;
@@ -205,13 +200,11 @@ body.dark-mode .theme-toggle button {
     margin-bottom: 20px;
 }
 
-/* Carousel track container */
 .carousel-track-container {
     overflow: hidden;
     position: relative;
 }
 
-/* Carousel track */
 .carousel-track {
     display: flex;
     gap: 20px;
@@ -221,7 +214,6 @@ body.dark-mode .theme-toggle button {
     margin: 0;
 }
 
-/* Carousel slide */
 .carousel-slide {
     min-width: 300px;
     border-radius: 10px;
@@ -235,13 +227,11 @@ body.dark-mode .theme-toggle button {
     display: block;
 }
 
-/* Hover effect */
 .carousel-slide:hover {
     transform: scale(1.05);
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-/* Carousel buttons */
 .carousel-button {
     position: absolute;
     top: 50%;
@@ -268,15 +258,12 @@ body.dark-mode .theme-toggle button {
     background-color: rgba(0, 0, 0, 0.8);
 }
 
-/* Consistent image size */
 .carousel-slide img {
     height: 200px;
     object-fit: cover;
 }
 
-
-
-/* Drives das aulas section */
+/* Drives Section */
 .drives-section {
     margin: 40px auto;
     text-align: center;
@@ -293,11 +280,6 @@ body.dark-mode .theme-toggle button {
     color: #0047ab;
 }
 
-.drives-section h3 {
-    color: #002457;
-}
-
-/* Drives container */
 .drives-container {
     display: flex;
     justify-content: space-around;
@@ -305,7 +287,6 @@ body.dark-mode .theme-toggle button {
     gap: 40px;
 }
 
-/* Each drive link */
 .drive-link {
     text-decoration: none;
     color: #333;
@@ -327,7 +308,6 @@ body.dark-mode .theme-toggle button {
     font-weight: bold;
 }
 
-/* Hover effects for drive links */
 .drive-link:hover {
     transform: translateY(-5px);
     box-shadow: 0 4px 16px rgba(0, 0, 0, 0.2);
@@ -337,9 +317,7 @@ body.dark-mode .theme-toggle button {
     filter: drop-shadow(0 6px 12px rgba(0, 0, 0, 0.3));
 }
 
-
-
-/* Updates section */
+/* Updates Section */
 .updates-section {
     margin: 50px auto;
     padding: 30px;
@@ -356,7 +334,6 @@ body.dark-mode .theme-toggle button {
     color: #0047ab;
 }
 
-/* Updates container */
 .updates-container {
     display: flex;
     justify-content: space-between;
@@ -364,7 +341,6 @@ body.dark-mode .theme-toggle button {
     gap: 30px;
 }
 
-/* Update card */
 .update-card {
     position: relative;
     width: 30%;
@@ -383,7 +359,6 @@ body.dark-mode .theme-toggle button {
     transition: transform 0.3s ease;
 }
 
-/* Overlay effect */
 .update-overlay {
     position: absolute;
     top: 0;
@@ -404,7 +379,6 @@ body.dark-mode .theme-toggle button {
     font-weight: bold;
 }
 
-/* Hover effects */
 .update-card:hover img {
     transform: scale(1.1);
 }
@@ -418,31 +392,26 @@ body.dark-mode .theme-toggle button {
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
-
-
-
-/* Container for Agenda and Drives */
+/* Agenda and Drives Container */
 .agenda-drives-container {
     display: flex;
     justify-content: space-between;
-    gap: 20px; /* Adds some space between the two sections */
+    gap: 20px;
     margin: 30px auto;
-    max-width: 1200px; /* Adjusts the width of the container */
-    flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+    max-width: 1200px;
+    flex-wrap: wrap;
 }
 
-/* Agenda styling (same as before) */
 .agenda {
-    flex: 1; /* Takes up equal space with the drives section */
+    flex: 1;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
 
-/* Drives section styling (same as before) */
 .drives-section {
-    flex: 1; /* Takes up equal space with the agenda section */
+    flex: 1;
     padding: 20px;
     background-color: #f8f9fa;
     border-radius: 10px;
@@ -450,7 +419,7 @@ body.dark-mode .theme-toggle button {
     text-align: center;
 }
 
-/* Style adjustments to make sure both sections align properly */
+/* Ensure sections align properly */
 .drives-container, .dates-container {
     display: flex;
     justify-content: space-around;
@@ -463,14 +432,6 @@ body.dark-mode .theme-toggle button {
     text-align: center;
 }
 
-/* Ensure the sections adjust properly on smaller screens */
-@media (max-width: 768px) {
-    .agenda-drives-container {
-        flex-direction: column; /* Stacks the sections vertically on small screens */
-    }
-}
-
-
 /* Header */
 .site-header {
     display: flex;
@@ -482,7 +443,6 @@ body.dark-mode .theme-toggle button {
     position: relative;
 }
 
-/* Left Section: Logo and Sidebar Button */
 .header-left {
     display: flex;
     align-items: center;
@@ -502,13 +462,13 @@ body.dark-mode .theme-toggle button {
     cursor: pointer;
     padding: 5px 15px;
     transition: transform 0.3s ease;
+    z-index: 999; 
 }
 
 .open-btn:hover {
     transform: scale(1.1);
 }
 
-/* Title and Subtitle centered in the screen */
 .header-title {
     position: absolute;
     left: 50%;
@@ -529,96 +489,75 @@ body.dark-mode .theme-toggle button {
     color: #d3d3d3;
 }
 
-/* Right Section: FIPE Logo */
 .header-right img {
     width: 60px;
     height: auto;
     cursor: pointer;
 }
 
-/* Hover effect for logos */
 .header-left img:hover, .header-right img:hover {
     transform: scale(1.1);
     transition: transform 0.3s ease;
 }
 
-
-/* Dark Mode for Body */
+/* Dark Mode */
 body.dark-mode {
-    background-color: #222; /* Dark mode background */
-    color: #f8f9fa; /* Light text for dark mode */
-}
-
-/* Sidebar in Dark Mode */
-body.dark-mode .sidebar {
-    background-color: #1a1a2e; /* Darker shade for sidebar */
-}
-
-body.dark-mode .open-btn
-{
-    background-color: #1a1a2e; /* Darker shade for sidebar button */
-}
-
-/* Intro Section in Dark Mode */
-body.dark-mode .intro {
-    background-color: #1a1a2e; /* Darker intro section */
+    background-color: #222;
     color: #f8f9fa;
 }
 
-/* Agenda Section in Dark Mode */
+body.dark-mode .sidebar {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .open-btn {
+    background-color: #1a1a2e;
+}
+
+body.dark-mode .intro {
+    background-color: #1a1a2e;
+}
+
 body.dark-mode .agenda {
-    background-color: #333; /* Dark mode agenda background */
+    background-color: #333;
     box-shadow: none;
 }
 
 body.dark-mode .agenda h2 {
-    color: #f8f9fa; /* Lighter heading for dark mode */
+    color: #f8f9fa;
 }
 
-/* Dates Section in Dark Mode */
 body.dark-mode .dates-column {
-    background-color: #444; /* Darker background for date column */
+    background-color: #444;
     box-shadow: none;
 }
 
 body.dark-mode .dates-column h3 {
-    color: #f8f9fa; /* Lighter heading color for dark mode */
+    color: #f8f9fa;
 }
 
 body.dark-mode .date-list li span {
-    background-color: #444; /* Darker badge for dates */
+    background-color: #444;
 }
 
-/* Footer in Dark Mode */
 body.dark-mode footer {
-    background-color: #1a1a2e; /* Dark mode footer background */
+    background-color: #1a1a2e;
 }
 
-/* Dark Mode for Carousel */
 body.dark-mode .carousel-slide {
-    background-color: #333; /* Dark mode carousel slide background */
+    background-color: #333;
 }
 
-/* Dark Mode for Drives Section */
 body.dark-mode .drives-section {
-    background-color: #1a1a2e; /* Dark mode for drives section */
+    background-color: #1a1a2e;
 }
 
 body.dark-mode .drives-section h2 {
     color: #f8f9fa;
 }
 
-body.dark-mode .drives-section h3 {
-    color: #f8f9fa;
-}
-
-/* Updates Section in Dark Mode */
 body.dark-mode .updates-section {
-    background-color: #1a1a2e; /* Darker background for updates section */
-}
-
-body.dark-mode .updates-section h2{
-    color: #f8f9fa; /* Darker background for updates section */
+    background-color: #1a1a2e;
 }
 
 body.dark-mode .update-card {
@@ -626,18 +565,72 @@ body.dark-mode .update-card {
     box-shadow: none;
 }
 
-/* Hover effects for light mode and dark mode */
-body.dark-mode .sidebar ul li a:hover,
-body.dark-mode .sidebar ul li button:hover {
-    color: #f8f9fa; /* Lighter hover for dark mode */
+/* Responsiveness: Mobile-first adjustments */
+@media (max-width: 768px) {
+    /* Stack elements vertically */
+    .agenda-drives-container {
+        flex-direction: column;
+    }
+
+    .header-title {
+        position: relative;
+        transform: none;
+        text-align: center;
+    }
+
+    .intro {
+        padding: 20px;
+    }
+
+    .carousel-slide {
+        min-width: 100%; /* Full width for carousel slides on mobile */
+    }
+
+    .updates-container {
+        flex-direction: column;
+    }
+
+    .updates-section h2, .drives-section h2 {
+        font-size: 20px;
+    }
+
+    .open-btn {
+        font-size: 20px;
+        padding: 8px 10px;
+    }
+
+    body.dark-mode .header-title h1 {
+        font-size: 20px;
+    }
 }
 
-/* Header in Dark Mode */
-body.dark-mode .site-header {
-    background-color: #1a1a2e; /* Dark mode for header */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+
+    button, a {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .header-title h1 {
+        font-size: 18px;
+    }
+
+    .updates-container {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .carousel-button {
+        font-size: 18px;
+        padding: 5px 10px;
+    }
+
+    footer {
+        font-size: 12px;
+    }
 }
 
-body.dark-mode .header-title h1,
-body.dark-mode .header-title .subtitle {
-    color: #f8f9fa; /* Light color for dark mode header title */
-}
+
